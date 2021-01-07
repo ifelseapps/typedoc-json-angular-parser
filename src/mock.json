@@ -330,7 +330,7 @@
 					}
 				},
 				{
-					"id": 29,
+					"id": 30,
 					"name": "initKeyManager",
 					"kind": 2048,
 					"kindString": "Method",
@@ -346,7 +346,7 @@
 					],
 					"signatures": [
 						{
-							"id": 30,
+							"id": 31,
 							"name": "initKeyManager",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -363,12 +363,14 @@
 					"name": "next",
 					"kind": 2048,
 					"kindString": "Method",
-					"flags": {},
+					"flags": {
+						"isPublic": true
+					},
 					"sources": [
 						{
 							"fileName": "items-list.component.ts",
 							"line": 66,
-							"character": 6
+							"character": 13
 						}
 					],
 					"signatures": [
@@ -378,6 +380,22 @@
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"parameters": [
+								{
+									"id": 21,
+									"name": "someParam",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "IItem"
+										}
+									}
+								}
+							],
 							"type": {
 								"type": "intrinsic",
 								"name": "void"
@@ -467,7 +485,7 @@
 					]
 				},
 				{
-					"id": 23,
+					"id": 24,
 					"name": "onChangeActiveItem",
 					"kind": 2048,
 					"kindString": "Method",
@@ -481,14 +499,14 @@
 					],
 					"signatures": [
 						{
-							"id": 24,
+							"id": 25,
 							"name": "onChangeActiveItem",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 25,
+									"id": 26,
 									"name": "item",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -507,7 +525,7 @@
 					]
 				},
 				{
-					"id": 26,
+					"id": 27,
 					"name": "onSelect",
 					"kind": 2048,
 					"kindString": "Method",
@@ -521,14 +539,14 @@
 					],
 					"signatures": [
 						{
-							"id": 27,
+							"id": 28,
 							"name": "onSelect",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 28,
+									"id": 29,
 									"name": "item",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -547,21 +565,23 @@
 					]
 				},
 				{
-					"id": 21,
+					"id": 22,
 					"name": "prev",
 					"kind": 2048,
 					"kindString": "Method",
-					"flags": {},
+					"flags": {
+						"isPublic": true
+					},
 					"sources": [
 						{
 							"fileName": "items-list.component.ts",
 							"line": 74,
-							"character": 6
+							"character": 13
 						}
 					],
 					"signatures": [
 						{
-							"id": 22,
+							"id": 23,
 							"name": "prev",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -600,14 +620,14 @@
 					"title": "Methods",
 					"kind": 2048,
 					"children": [
-						29,
+						30,
 						19,
 						15,
 						17,
 						13,
-						23,
-						26,
-						21
+						24,
+						27,
+						22
 					]
 				}
 			],
