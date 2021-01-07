@@ -1,0 +1,646 @@
+{
+	"id": 0,
+	"name": "ng-bricks",
+	"kind": 0,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "ItemsListComponent",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"decorators": [
+				{
+					"name": "Component",
+					"type": {
+						"type": "reference",
+						"name": "Component"
+					},
+					"arguments": {
+						"obj": "{\r\n  selector: 'b-items-list',\r\n  templateUrl: './items-list.component.html',\r\n  styleUrls: ['./items-list.component.scss'],\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n}"
+					}
+				}
+			],
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "new ItemsListComponent",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "_cdr",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "ChangeDetectorRef"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 1,
+								"name": "ItemsListComponent"
+							}
+						}
+					]
+				},
+				{
+					"id": 12,
+					"name": "_keyManager",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 54,
+							"character": 21
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "ItemComponent"
+							}
+						],
+						"name": "ActiveDescendantKeyManager"
+					}
+				},
+				{
+					"id": 9,
+					"name": "changeActiveItem",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "Событие вызывается при навигации по списку"
+					},
+					"decorators": [
+						{
+							"name": "Output",
+							"type": {
+								"type": "reference",
+								"name": "Output"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 43,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "IItem"
+							}
+						],
+						"name": "EventEmitter"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 11,
+					"name": "children",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"decorators": [
+						{
+							"name": "ViewChildren",
+							"type": {
+								"type": "reference",
+								"name": "ViewChildren"
+							},
+							"arguments": {
+								"selector": "ItemComponent"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 52,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "ItemComponent"
+							}
+						],
+						"name": "QueryList"
+					}
+				},
+				{
+					"id": 8,
+					"name": "itemTemplate",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isOptional": true
+					},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 37,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "intrinsic",
+								"name": "undefined"
+							},
+							{
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reference",
+										"name": "IItem"
+									}
+								],
+								"name": "TemplateRef"
+							}
+						]
+					}
+				},
+				{
+					"id": 5,
+					"name": "items",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 28,
+							"character": 7
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"name": "IItem"
+						}
+					}
+				},
+				{
+					"id": 7,
+					"name": "searchPhrase",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 34,
+							"character": 14
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 10,
+					"name": "selectItem",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"comment": {
+						"shortText": "Событие вызывается когда выбран конкретный элемент"
+					},
+					"decorators": [
+						{
+							"name": "Output",
+							"type": {
+								"type": "reference",
+								"name": "Output"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 49,
+							"character": 12
+						}
+					],
+					"type": {
+						"type": "reference",
+						"typeArguments": [
+							{
+								"type": "reference",
+								"name": "IItem"
+							}
+						],
+						"name": "EventEmitter"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 6,
+					"name": "selected",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {},
+					"decorators": [
+						{
+							"name": "Input",
+							"type": {
+								"type": "reference",
+								"name": "Input"
+							},
+							"arguments": {}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 31,
+							"character": 10
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "IItem"
+					}
+				},
+				{
+					"id": 29,
+					"name": "initKeyManager",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPrivate": true
+					},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 90,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 30,
+							"name": "initKeyManager",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 19,
+					"name": "next",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 66,
+							"character": 6
+						}
+					],
+					"signatures": [
+						{
+							"id": 20,
+							"name": "next",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 15,
+					"name": "ngAfterViewInit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 59,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 16,
+							"name": "ngAfterViewInit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 17,
+					"name": "ngOnDestroy",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 63,
+							"character": 13
+						}
+					],
+					"signatures": [
+						{
+							"id": 18,
+							"name": "ngOnDestroy",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 13,
+					"name": "ngOnInit",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 56,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 14,
+							"name": "ngOnInit",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "onChangeActiveItem",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 82,
+							"character": 20
+						}
+					],
+					"signatures": [
+						{
+							"id": 24,
+							"name": "onChangeActiveItem",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 25,
+									"name": "item",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IItem"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "onSelect",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 86,
+							"character": 10
+						}
+					],
+					"signatures": [
+						{
+							"id": 27,
+							"name": "onSelect",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 28,
+									"name": "item",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IItem"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 21,
+					"name": "prev",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "items-list.component.ts",
+							"line": 74,
+							"character": 6
+						}
+					],
+					"signatures": [
+						{
+							"id": 22,
+							"name": "prev",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						12,
+						9,
+						11,
+						8,
+						5,
+						7,
+						10,
+						6
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						29,
+						19,
+						15,
+						17,
+						13,
+						23,
+						26,
+						21
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "items-list.component.ts",
+					"line": 24,
+					"character": 31
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"name": "OnInit"
+				},
+				{
+					"type": "reference",
+					"name": "AfterViewInit"
+				},
+				{
+					"type": "reference",
+					"name": "OnDestroy"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				1
+			]
+		}
+	]
+}
