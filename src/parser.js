@@ -30,10 +30,24 @@ function parse(tree) {
           description: child.comment ? child.comment.shortText : null,
         });
       }
+
+      if (child.kindString === 'Method' && child.flags.isPublic) {
+        api.methods.push({
+          name: child.name,
+          type: getMethodTypeDisplayString(child.signatures[0]),
+          description: child.comment ? child.comment.shortText : null,
+
+        });
+      }
     });
 
     console.log(api);
   });
+}
+
+function getMethodTypeDisplayString(signature) {
+  const parameters = (signature.parameters || []).map(p => `${p.name}: ${getTypeDisplayString(p.type)}`);
+  return `${signature.name}(${parameters.join(', ')}): ${getTypeDisplayString(signature.type)}`;
 }
 
 function getTypeDisplayString(type) {
@@ -41,6 +55,8 @@ function getTypeDisplayString(type) {
     const types = type.types.map(getTypeDisplayString);
     return types.join(' | ');
   }
+
+  // TODO: type === 'record'?
 
   if (type.type === 'array') {
     return `Array<${type.elementType.name}>`;
