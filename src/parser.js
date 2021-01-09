@@ -76,7 +76,7 @@ function getTypeDisplayString(type) {
   }
 
   if (type.typeArguments) {
-    const args = type.typeArguments.map(a => a.name);
+    const args = type.typeArguments.map(getTypeDisplayString);
     return `${type.name}<${args.join(', ')}>`;
   }
 
