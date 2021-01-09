@@ -1,10 +1,12 @@
+const path = require('path');
+const fs = require('fs');
 const mock = require('./mock.json');
 
 const AVAILABLE_DECORATORS = ['Output', 'Input'];
 
-parse(mock);
+parse(mock, { outputDir: './dist' });
 
-function parse(tree) {
+function parse(tree, { outputDir }) {
   tree.children.forEach(component => {
     const metaStr = component.decorators[0].arguments.obj;
     const matchResult = metaStr.match(/selector:\s\'(.+)\'/);
@@ -41,13 +43,22 @@ function parse(tree) {
       }
     });
 
-    console.log(api);
+    const result = JSON.stringify({ selector, api }, null, 2);
+    const outputDirPath = path.resolve(__dirname, '../', outputDir);
+    if (!fs.existsSync(outputDirPath)) {
+      fs.mkdirSync(outputDirPath);
+    }
+    fs.writeFileSync(
+      path.resolve(outputDirPath, `${selector}.json`),
+      result,
+      { encoding: 'utf8' }
+    );
   });
 }
 
 function getMethodTypeDisplayString(signature) {
   const parameters = (signature.parameters || []).map(p => `${p.name}: ${getTypeDisplayString(p.type)}`);
-  return `${signature.name}(${parameters.join(', ')}): ${getTypeDisplayString(signature.type)}`;
+  return `(${parameters.join(', ')}) => ${getTypeDisplayString(signature.type)}`;
 }
 
 function getTypeDisplayString(type) {
