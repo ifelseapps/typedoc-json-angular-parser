@@ -1,11 +1,15 @@
 const path = require('path');
 const fs = require('fs');
-const mock = require('./mock.json');
 
 const AVAILABLE_DECORATORS = ['Output', 'Input'];
 
-parse(mock, { outputDir: './dist' });
-
+/**
+ * Парсит AST, сгенерированное typedoc
+ *
+ * @param {Object} tree результат работы typedoc
+ * @param {Object} settings
+ * @param {String} settings.outputDir директория для сохранения результата
+ */
 function parse(tree, { outputDir }) {
   tree.children.forEach(component => {
     const metaStr = component.decorators[0].arguments.obj;
@@ -72,9 +76,13 @@ function getTypeDisplayString(type) {
   }
 
   if (type.typeArguments) {
-    const arguments = type.typeArguments.map(a => a.name);
-    return `${type.name}<${arguments.join(', ')}>`;
+    const args = type.typeArguments.map(a => a.name);
+    return `${type.name}<${args.join(', ')}>`;
   }
 
   return type.name;
 }
+
+module.exports.parse = parse;
+module.exports.getMethodDisplayString = getMethodTypeDisplayString;
+module.exports.getTypeDisplayString = getTypeDisplayString;
