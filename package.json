@@ -2,7 +2,7 @@
   "name": "typedoc-json-angular-parser",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/parser.js",
   "scripts": {
     "run": "node ./src/parser.js"
   },
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/ifelseapps/typedoc-json-angular-parser.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Maxim Pavlov",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ifelseapps/typedoc-json-angular-parser/issues"
   },
