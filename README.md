@@ -4,13 +4,13 @@
 
 ## Установка:
 ```
-npm install @ifelseapps_/typedoc-json-angular-parser
+npm install @ifelseapps/typedoc-json-angular-parser
 ```
 
 ## Использование
 
 ```javascript
-const { parse } = require('@ifelseapps_/typedoc-json-angular-parser');
+const { parse } = require('@ifelseapps/typedoc-json-angular-parser');
 const typeDocResult = require('docs.json');
 
 parse(typeDocResult, { outputPath: '/some/path' });

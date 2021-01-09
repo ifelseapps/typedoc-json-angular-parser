@@ -1,5 +1,5 @@
 {
-  "name": "typedoc-json-angular-parser",
+  "name": "@ifelseapps/typedoc-json-angular-parser",
   "version": "1.0.0",
   "description": "",
   "main": "src/parser.js",
