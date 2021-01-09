@@ -56,10 +56,8 @@ function getTypeDisplayString(type) {
     return types.join(' | ');
   }
 
-  // TODO: type === 'record'?
-
   if (type.type === 'array') {
-    return `Array<${type.elementType.name}>`;
+    return `Array<${getTypeDisplayString(type.elementType)}>`;
   }
 
   if (type.typeArguments) {
