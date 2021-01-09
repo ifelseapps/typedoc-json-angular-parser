@@ -48,7 +48,7 @@ function parse(tree, { outputDir }) {
     });
 
     const result = JSON.stringify({ selector, api }, null, 2);
-    const outputDirPath = path.resolve(__dirname, '../', outputDir);
+    const outputDirPath = path.resolve(outputDir);
     if (!fs.existsSync(outputDirPath)) {
       fs.mkdirSync(outputDirPath);
     }
