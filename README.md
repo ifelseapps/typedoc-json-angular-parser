@@ -15,3 +15,39 @@ const typeDocResult = require('docs.json');
 
 parse(typeDocResult, { outputPath: '/some/path' });
 ```
+
+Пример сгенерированного описания:
+```json
+{
+  "selector": "b-combobox",
+  "api": {
+    "inputs": [
+      {
+        "name": "items",
+        "type": "Array<IItem>",
+        "description": null
+      },
+      {
+        "name": "placeholder",
+        "type": "string",
+        "description": null
+      },
+      {
+        "name": "searchPlaceholder",
+        "type": "string",
+        "description": null
+      },
+      {
+        "name": "width",
+        "type": "string",
+        "description": null
+      }
+    ],
+    "outputs": [],
+    "methods": []
+  }
+}
+```
+
+### Особенности
+* Для того, чтобы публичный метод попал в описание api компонента — ему нужно явно прописывать модификатор доступа `public`.
